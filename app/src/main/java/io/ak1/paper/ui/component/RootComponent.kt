@@ -34,11 +34,8 @@ import io.ak1.paper.ui.theme.isSystemInDarkThemeCustom
 @Composable
 fun RootComponent() {
     val isDark = isSystemInDarkThemeCustom()
-  //  val systemUiController = rememberSystemUiController()
     val uriHandler = LocalUriHandler.current
     PaperTheme(isDark) {
-       // val darkIcons = !isDark
-      //  SideEffect { systemUiController.setSystemBarsColor(Color.Transparent, darkIcons) }
         Surface(color = MaterialTheme.colorScheme.background) {
             val scrollState = rememberLazyListState()
             val bottomSheetNavigator = rememberBottomSheetNavigator()

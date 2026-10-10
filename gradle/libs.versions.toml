@@ -1,0 +1,65 @@
+[versions]
+agp = "8.1.4"
+kotlin = "1.9.22"
+composeCompiler = "1.5.8"
+compose = "1.5.4"
+material3 = "1.1.2"
+coreKtx = "1.12.0"
+lifecycle = "2.6.2"
+activityCompose = "1.7.2"
+room = "2.6.1"
+koin = "3.5.3"
+coroutines = "1.7.3"
+datastore = "1.0.0"
+navigation = "2.7.4"
+coil = "2.4.0"
+drawbox = "1.0.3"
+snapper = "0.3.0"
+rangVikalp = "1.0.0-alpha02"
+gson = "2.10"
+accompanist = "0.32.0"
+compressor = "3.0.1"
+multidex = "2.0.1"
+junit = "4.13.2"
+androidxTestExt = "1.1.4"
+espresso = "3.5.0"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+compose-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "compose" }
+compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview", version.ref = "compose" }
+compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "compose" }
+compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4", version.ref = "compose" }
+compose-runtime-livedata = { group = "androidx.compose.runtime", name = "runtime-livedata", version.ref = "compose" }
+compose-material3 = { group = "androidx.compose.material3", name = "material3", version.ref = "material3" }
+lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
+lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycle" }
+activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+multidex = { group = "androidx.multidex", name = "multidex", version.ref = "multidex" }
+compressor = { group = "id.zelory", name = "compressor", version.ref = "compressor" }
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+koin-androidx-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koin" }
+coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+datastore-preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "datastore" }
+navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigation" }
+coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
+drawbox = { group = "io.ak1", name = "drawbox", version.ref = "drawbox" }
+snapper = { group = "dev.chrisbanes.snapper", name = "snapper", version.ref = "snapper" }
+rang-vikalp = { group = "io.ak1", name = "rang-vikalp", version.ref = "rangVikalp" }
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+accompanist-navigation-material = { group = "com.google.accompanist", name = "accompanist-navigation-material", version.ref = "accompanist" }
+accompanist-permissions = { group = "com.google.accompanist", name = "accompanist-permissions", version.ref = "accompanist" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidxTestExt" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+# NOTE: kotlin-kapt and kotlin-plugin.parcelize have no standalone plugin markers in any
+# repository — they are sub-plugins inside kotlin-gradle-plugin. They are applied with
+# id("...") without a version, right after the kotlin-android plugin.

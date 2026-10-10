@@ -103,6 +103,13 @@ fun NoteScreen(
     val inputService = LocalTextInputService.current
     val focus = remember { mutableStateOf(false) }
     val (showDialog, setShowDialog) = remember { mutableStateOf(false) }
+    // Request focus once, after BasicTextField's modifiers are attached —
+    // calling it from onFocusChanged crashes with "FocusRequester is not initialized"
+    LaunchedEffect(uiState.note.note.noteId) {
+        if (uiState.note.note.description.isEmpty()) {
+            focusRequester.requestFocus()
+        }
+    }
     val noteFont = TextStyle(
         fontWeight = FontWeight.Thin,
         color = MaterialTheme.colorScheme.primary,
@@ -175,9 +182,6 @@ fun NoteScreen(
                         .padding(14.dp, 3.dp, 14.dp, 50.dp)
                         .focusRequester(focusRequester)
                         .onFocusChanged { focusState ->
-                            if (!focusState.isFocused && uiState.note.note.description.isEmpty()) {
-                                focusRequester.requestFocus()
-                            }
                             if (focus.value != focusState.isFocused) {
                                 focus.value = focusState.isFocused
                                 if (!focusState.isFocused && !showDialog) {
